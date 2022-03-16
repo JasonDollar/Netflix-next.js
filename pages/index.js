@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Banner from '../components/Banner/Banner'
 // import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
@@ -12,6 +13,9 @@ export default function Home() {
       </Head>
 
       <h1>Netflix</h1>
+
+      
+      <Banner title="Clifford" subtitle="Subtitle test, very testy" imgUrl="/static/clifford.webp"/>
     </div>
   )
 }
