@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Banner from '../components/Banner/Banner'
+import Card from '../components/Card/Card'
 import Navbar from '../components/Nav/Navbar'
-// import Image from 'next/image'
+
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -15,6 +16,10 @@ export default function Home() {
 
       <Navbar username="Jason"/>
       <Banner title="Clifford" subtitle="Subtitle test, very testy" imgUrl="/static/clifford.webp"/>
+
+      <Card imgUrl="/static/clifford.webp" size="large"/>
+      <Card imgUrl="/static/clifford.webp" size="medium"/>
+      <Card imgUrl="/static/clifford.webp" size="small"/>
     </div>
   )
 }
