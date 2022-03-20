@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Image from "next/image"
+import { motion } from 'framer-motion'
 import styles from './Card.module.scss'
 
 const Card = ({ imgUrl, size = "medium" }) => {
@@ -17,8 +18,11 @@ const Card = ({ imgUrl, size = "medium" }) => {
   }
 
   return (
-    <div className={styles.container}>
-      <div className={classMap[size]}>
+    <div 
+      className={styles.container}
+
+    >
+      <motion.div  className={`${styles.imgMotionWrapper} ${classMap[size]}`} whileHover={{ scale: 1.2 }}>
         <Image 
           src={imgSrc}
           alt="Movie image"
@@ -27,7 +31,7 @@ const Card = ({ imgUrl, size = "medium" }) => {
           onError={handleOnError}
         />
 
-      </div>
+      </motion.div>
     </div>
   )
 }
