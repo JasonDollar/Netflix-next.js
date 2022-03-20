@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Banner from '../components/Banner/Banner'
 import Card from '../components/Card/Card'
+import SectionCards from '../components/Card/SectionCards'
 import Navbar from '../components/Nav/Navbar'
 
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 
 export default function Home() {
   return (
@@ -17,9 +18,11 @@ export default function Home() {
       <Navbar username="Jason"/>
       <Banner title="Clifford" subtitle="Subtitle test, very testy" imgUrl="/static/clifford.webp"/>
 
-      <Card imgUrl="/static/clifford.webp" size="large"/>
-      <Card imgUrl="/static/clifford.webp" size="medium"/>
-      <Card imgUrl="/static/clifford.webp" size="small"/>
+      <div  className={styles.sectionWrapper}>
+
+        <SectionCards title="Disney" />
+      </div>
+
     </div>
   )
 }
