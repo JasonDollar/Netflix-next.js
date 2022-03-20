@@ -1,10 +1,21 @@
 import Head from 'next/head'
 import Banner from '../components/Banner/Banner'
-import Card from '../components/Card/Card'
 import SectionCards from '../components/Card/SectionCards'
 import Navbar from '../components/Nav/Navbar'
 
 import styles from '../styles/Home.module.scss'
+
+const videos = [
+  {
+    imgUrl: "/static/clifford.webp"
+  },
+  {
+    imgUrl: "/static/clifford.webp"
+  },
+  {
+    imgUrl: "/static/clifford.webp"
+  },
+]
 
 export default function Home() {
   return (
@@ -20,7 +31,8 @@ export default function Home() {
 
       <div  className={styles.sectionWrapper}>
 
-        <SectionCards title="Disney" />
+        <SectionCards title="Disney" videos={videos} size="large"/>
+        <SectionCards title="Productivity" videos={videos} size="medium"/>
       </div>
 
     </div>
